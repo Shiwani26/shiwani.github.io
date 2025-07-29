@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shiwani Pradhananga | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 40px;
+      gap: 20px;
+    }
+
+    .navbar a img {
+      width: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar a img:hover {
+      transform: scale(1.2);
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .about-photo img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .about-content {
+      max-width: 600px;
+      margin-left: 40px;
+    }
+
+    .about-content h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .download-btn {
+      background: #6c63ff;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    .download-btn:hover {
+      background: #5146e1;
+    }
+
+    .down-arrow {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+
+    .down-arrow img {
+      width: 30px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .skills-section {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+    }
+
+    .skills-section h1 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .skill-box {
+      background-color: #f1f1f1;
+      padding: 30px 20px;
+      border-radius: 12px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .skill-box img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .skill-box h2 {
+      color: #ff6f61;
+      margin: 10px 0;
+      font-size: 1.3em;
+    }
+
+    .project-section {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .project-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .project-section .underline {
+      width: 60px;
+      height: 4px;
+      background: #f5b63c;
+      margin: 20px auto;
+    }
+
+    .project-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    .project-text {
+      max-width: 400px;
+      text-align: left;
+      margin: 20px;
+    }
+
+    .project-text h4 {
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .project-text h5 {
+      font-size: 1.3em;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .project-text p {
+      margin: 15px 0;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-text a {
+      background-color: #f5b63c;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .project-image img {
+      width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      font-size: 14px;
+      background-color: #f9f9f9;
+    }
+    .top-bar-left {
+      color: #555;
+    }
+    .top-bar-right a {
+      margin-left: 12px;
+    }
+    .top-bar-right img {
+      width: 24px;
+      height: 24px;
+
+    @media (max-width: 768px) {
+      .about-section, .project-card {
+        flex-direction: column;
+      }
+
+      .about-content, .project-text {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .project-image img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+
+    }
+
+    }
+
+     .skills-section, .projects, .cert-section, .contact-section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">📧 shiwanipradhananga@gmail.com</div>
+    <div class="top-bar-right">
+      <a href="https://www.linkedin.com/in/shiwani-pradhananga/" target="_blank"><img src="in.png" alt="LinkedIn"></a>
+      <a href="https://github.com/Shiwani26" target="_blank"><img src="git.png" alt="GitHub"></a>
+      <a href="https://medium.com/@shiwanipradhananga" target="_blank"><img src="Medium.png" alt="Medium"></a>
+    </div>
+  </div>
+
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-photo">
+    <img src="Shiwani.jpg" alt="Shiwani Pradhananga">
+  </div>
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>I’m a Business & Data Analyst who transforms complex data into clear insights. Experienced with tools like SQL, Power BI, Python, and Excel, I help organizations make smarter decisions backed by data.</p>
+    <a href="Shiwani_Resume.pdf" class="download-btn" target="_blank">Download Resume</a>
+  </div>
+  <a href="#featured-projects" class="down-arrow"><img src="down-arrow.png" alt="Scroll Down"></a>
+  
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section" style="text-align: center; padding: 60px 20px; background-color: #f8f8f8;">
+  <h1 style="font-size: 2.8em; margin-bottom: 40px;">Skills</h1>
+  <div class="skills-grid" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 30px; justify-content: center; padding-bottom: 10px;">
+    
+    <div class="skill-box" style="background-color: #f1f1f1; padding: 30px 20px; border-radius: 12px; min-width: 200px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 0 0 auto;">
+      <img src="sql.png" style="height: 40px; margin-bottom: 10px;">
+      <h2 style="color: #ff6f61; margin: 10px 0; font-size: 1.3em;">SQL</h2>
+      <p>Advanced Queries & Joins</p>
+    </div>
+
+    <div class="skill-box" style="background-color: #f1f1f1; padding: 30px 20px; border-radius: 12px; min-width: 200px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 0 0 auto;">
+      <img src="powerbi.png" style="height: 40px; margin-bottom: 10px;">
+      <h2 style="color: #ff6f61; margin: 10px 0; font-size: 1.3em;">Power BI</h2>
+      <p>DAX, Reports, Dashboards</p>
+    </div>
+
+    <div class="skill-box" style="background-color: #f1f1f1; padding: 30px 20px; border-radius: 12px; min-width: 200px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 0 0 auto;">
+      <img src="python.png" style="height: 40px; margin-bottom: 10px;">
+      <h2 style="color: #ff6f61; margin: 10px 0; font-size: 1.3em;">Python</h2>
+      <p>Pandas, NumPy, Automation</p>
+    </div>
+
+    <div class="skill-box" style="background-color: #f1f1f1; padding: 30px 20px; border-radius: 12px; min-width: 200px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 0 0 auto;">
+      <img src="excel.png" style="height: 40px; margin-bottom: 10px;">
+      <h2 style="color: #ff6f61; margin: 10px 0; font-size: 1.3em;">Excel</h2>
+      <p>Power Query & Pivot Tables</p>
+    </div>
+
+    <div class="skill-box" style="background-color: #f1f1f1; padding: 30px 20px; border-radius: 12px; min-width: 200px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 0 0 auto;">
+      <img src="tableau.png" style="height: 40px; margin-bottom: 10px;">
+      <h2 style="color: #ff6f61; margin: 10px 0; font-size: 1.3em;">Tableau</h2>
+      <p>Dashboards & Storytelling</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+   <!-- Spacer + Down Arrow -->
+<div style="height: 60px; text-align: center;">
+  <a href="#certifications">
+    <img src="down-arrow.png" alt="Scroll to Certifications" style="width: 30px; animation: bounce 2s infinite;">
+  </a>
+</div>
+</section>
+
+<!-- Featured Projects -->
+<section class="project-section" id="featured-projects">
+  <h2>Featured Projects</h2>
+  <div class="underline"></div>
+
+
+
+  <!-- Project 1 -->
+  <div class="project-card">
+    <div class="project-text">
+      <h4>Python | Predictive Analysis | Scikit-Learn</h4>
+      <h5>Will the customer purchase?</h5>
+      <p>Used classification models to predict purchase intent using scikit-learn. Includes data wrangling, feature engineering, and model evaluation.</p>
+      <a href="https://github.com/Shiwani26/Predictive-Analytics-Will-the-customer-purchase-your-products" target="_blank">More</a>
+    </div>
+    <div class="project-image">
+      <img src="Dashboard.PNG" alt="Project 1">
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-card">
+    <div class="project-text">
+      <h4>Excel | Tableau | Data Analysis</h4>
+      <h5>Customer Churn Correlation</h5>
+      <p>Analyzed telecom customer churn using correlation and visualization techniques. Focused on identifying key charges linked to churn.</p>
+      <a href="https://github.com/Shiwani26/Analyzing-correlationbetween-customer-churn-rate-and-charges-in-telecommunication-setting" target="_blank">More</a>
+    </div>
+    <div class="project-image">
+      <img src="churn-dashboard.png" alt="Project 2">
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-card">
+    <div class="project-text">
+      <h4>Python | Customer Segmentation</h4>
+      <h5>RFM Analyzer Tool</h5>
+      <p>Built an RFM analysis tool to segment customers based on Recency, Frequency, and Monetary value. Enables targeted marketing strategies.</p>
+      <a href="https://github.com/Shiwani26/RFM-Analyzer-Tool" target="_blank">More</a>
+    </div>
+    <div class="project-image">
+      <img src="distribution.png" alt="Project 3">
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="project-card">
+    <div class="project-text">
+      <h4>SQL | Exploratory Data Analysis</h4>
+      <h5>COVID-19 Risk & Vaccination</h5>
+      <p>SQL-based EDA to explore vaccination trends, gender, and age distributions across countries during the pandemic.</p>
+      <a href="https://medium.com/@shiwanipradhananga/exploratory-data-analysis-eda-of-covid-19-risk-factors-vaccination-age-and-gender-using-sql-60dabe2833b7" target="_blank">More</a>
+    </div>
+    <div class="project-image">
+      <img src="covid-19.png" alt="Project 4">
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <div class="project-card">
+    <div class="project-text">
+      <h4>Excel | Business Insights</h4>
+      <h5>E-commerce Website Performance</h5>
+      <p>Extracted key e-commerce performance insights including customer behavior, product trends, and conversion optimization strategies.</p>
+      <a href="https://medium.com/@shiwanipradhananga/analysing-e-commerce-website-performance-65265e73e858" target="_blank">More</a>
+    </div>
+    <div class="project-image">
+      <img src="ecommerce-performance.png" alt="Project 5">
+    </div>
+  </div>
+   <div style="height: 100px;"></div>
+
+ <!-- Spacer + Down Arrow -->
+<div style="height: 60px; text-align: center;">
+  <a href="#certifications">
+    <img src="down-arrow.png" alt="Scroll to Certifications" style="width: 30px; animation: bounce 2s infinite;">
+  </a>
+</div>
+
+
+ 
+<!-- Professional Certifications Section -->
+<section class="skills-section">
+  <h1>Professional Certifications</h1>
+  <div class="skills-grid">
+    
+    <div class="skill-box">
+         <img src="cisco.png" alt="Cisco Logo">
+      <p>Issued by Cisco Networking Academy</p>
+      <a href="https://www.credly.com/badges/..." target="_blank" class="download-btn">View Certificate</a>
+    </div>
+
+    <div class="skill-box">
+       <img src="deloitte.png" alt="Deloitte Logo">
+      <p>Issued by Deloitte Australia | Forage</p>
+      <a href="https://www.linkedin.com/in/shiwani-pradhananga/details/certifications/" target="_blank" class="download-btn">View Certificate</a>
+    </div>
+
+    <div class="skill-box">
+       <img src="deloitte.png" alt="Deloitte Logo">
+      <p>Issued by NSW Government | Forage</p>
+      <a href="https://www.linkedin.com/in/shiwani-pradhananga/details/certifications/" target="_blank" class="download-btn">View Certificate</a>
+    </div>
+
+    <!-- Add more certificates here -->
+    
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" style="text-align: center;">
+  <h2 style="font-size: 2.5em; margin-bottom: 30px;">Contact Me</h2>
+  
+  <form action="#" style="max-width: 600px; margin: auto;">
+    <input type="text" placeholder="Name" required style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;"><br>
+    <input type="email" placeholder="Email" required style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;"><br>
+    <textarea placeholder="Message" rows="5" style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;"></textarea><br>
+    <input type="submit" value="SUBMIT" style="background-color: #f5b63c; color: #000; padding: 12px 30px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">
+  </form>
+
+  <p style="margin-top: 30px;">Or reach me directly:</p>
+  <div style="margin-top: 10px;">
+    <a href="mailto:shiwanipradhananga@gmail.com" class="download-btn" style="margin-right: 10px;">Email Me</a>
+    <a href="https://www.linkedin.com/in/shiwani-pradhananga/" target="_blank" class="download-btn">LinkedIn</a>
+  </div>
+</section>
+
+
+
+
+<footer class="site-footer">
+  <p>© 2025 Shiwani Pradhananga. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>
